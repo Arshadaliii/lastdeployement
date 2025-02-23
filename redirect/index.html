@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://wallpapers.com/images/hd/skeleton-head-png-40-soz43sh3caerjco0.jpg">
+    <title>Redirect search engine</search></title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Dark Theme Background */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            background-image: url("https://wallpaper.dog/large/20532300.jpg");
+            background-size: cover;
+    
+        }
+
+        /* Form Container */
+        .frm {
+            height: 200px;
+            width: 40%;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            border: 2px solid #00b3ff;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-shadow: 0 0 20px rgba(0, 179, 255, 0.5);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Input Field Styling */
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #00b3ff;
+            border-radius: 5px;
+            background-color: #111;
+            color: #00b3ff;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #00ffcc;
+            box-shadow: 0 0 10px #00ffcc;
+        }
+
+        /* Button Styling */
+        button {
+            padding: 10px;
+            font-size: 18px;
+            background-color: #ff3366;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff6699;
+            box-shadow: 0 0 10px #ff3366;
+        }
+
+        #info{
+            position: absolute;
+            bottom: 20px;
+            right: 570px;
+        }
+
+        /* Link for redirection */
+        a {
+            visibility: hidden;
+        }
+
+        /* Neon Blue Animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <form class="frm">
+        <input type="text" id="inp" placeholder="Enter Website">
+        <button id="btn" type="submit">Submit</button>
+        <p>Hint: Enter the site</p>
+        <a target="_blank"></a>
+        <p id="info" > All the &copy;copyright reserved by Md Arshad</p>
+    </form>
+
+    <script>
+        let frm = document.getElementsByClassName("frm")[0];
+        let btn = document.getElementById("btn");
+        let an = document.querySelector("a");
+        let inp = document.getElementById("inp");
+
+        frm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            let value = inp.value;
+            an.setAttribute("href", `https://${value}.com`);
+            an.click();
+        });
+    </script>
+</body>
+</html>
