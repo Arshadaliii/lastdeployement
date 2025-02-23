@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://wallpapers.com/images/hd/skeleton-head-png-40-soz43sh3caerjco0.jpg">
-    <title>Redirect search engine</search></title>
+    <title>Redirect search engine</title>
     <style>
         /* General Reset */
         * {
@@ -24,13 +24,13 @@
             overflow: hidden;
             background-image: url("https://wallpaper.dog/large/20532300.jpg");
             background-size: cover;
-    
         }
 
         /* Form Container */
         .frm {
-            height: 200px;
-            width: 40%;
+            height: auto;
+            width: 90%;
+            max-width: 500px;
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 15px;
             border: 2px solid #00b3ff;
@@ -51,6 +51,7 @@
             background-color: #111;
             color: #00b3ff;
             transition: all 0.3s ease;
+            width: 100%;
         }
 
         input:focus {
@@ -69,6 +70,7 @@
             border-radius: 5px;
             cursor: pointer;
             transition: all 0.3s ease;
+            width: 100%;
         }
 
         button:hover {
@@ -79,7 +81,9 @@
         #info{
             position: absolute;
             bottom: 20px;
-            right: 570px;
+            right: 20px;
+            font-size: 12px;
+            text-align: center;
         }
 
         /* Link for redirection */
@@ -96,6 +100,25 @@
             100% {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 600px) {
+            .frm {
+                width: 95%;
+                padding: 20px;
+            }
+
+            input, button {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            #info {
+                font-size: 10px;
+                bottom: 10px;
+                right: 10px;
             }
         }
     </style>
