@@ -141,7 +141,7 @@
         frm.addEventListener("submit", (e) => {
             e.preventDefault();
             let value = inp.value;
-            an.setAttribute("href", `https://${value}.com`);
+            an.setAttribute("href", `https://${value}.com`.trim();
             an.click();
         });
     </script>
